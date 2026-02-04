@@ -1,0 +1,17 @@
+{
+  "app_name": "HelloCall",
+  "bundle_id": "com.hellocall.hellocall",
+  "description": "A phone-calling simulation app connected to Firebase.",
+  "features": [
+    "Simulate call logs",
+    "Store call logs in Firebase Realtime Database",
+    "Safe and isolated, does not connect to Win11 Launcher"
+  ],
+  "platforms": ["Python", "Cloud Shell", "Android (optional)"],
+  "firebase": {
+    "realtime_database": true,
+    "storage": false,
+    "messaging": false
+  },
+  "license": "MIT"
+}
