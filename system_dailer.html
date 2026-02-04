@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HelloCall System Dialer</title>
+</head>
+<body>
+    <h1>HelloCall System Dialer</h1>
+    <p>This page documents the system dialer functionality for the HelloCall app.</p>
+
+    <h2>App Feature</h2>
+    <ul>
+        <li>Simulates phone calls for testing and demonstration purposes</li>
+        <li>Call logs are saved in Firebase Realtime Database</li>
+        <li>Uses bundle ID: <strong>com.hellocall.hellocall</strong></li>
+        <li>Safe, isolated, does not access real device dialer</li>
+    </ul>
+
+    <h2>Firebase Integration</h2>
+    <p>Call logs are pushed to Firebase using the <code>hellocall_firebase_service.json</code> credentials file.</p>
+
+    <h2>Usage</h2>
+    <ol>
+        <li>Run <code>hellocall.py</code> in a Python environment (Cloud Shell or local)</li>
+        <li>Enter caller name, callee number, and call duration</li>
+        <li>Call log will be added to Firebase and displayed</li>
+    </ol>
+
+    <h2>Notes</h2>
+    <ul>
+        <li>Static HTML file for documentation only</li>
+        <li>Safe to upload to GitHub</li>
+        <li>Does not actually make phone calls</li>
+    </ul>
+</body>
+</html>
