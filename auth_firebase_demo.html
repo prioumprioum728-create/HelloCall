@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HelloCall Auth + Firebase Demo</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #eef1f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.box {
+    background: white;
+    padding: 25px;
+    width: 320px;
+    border-radius: 10px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+input, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+.login { background:#2a2a72; color:white; }
+.signup { background:#555; color:white; }
+.google { background:#db4437; color:white; }
+
+.status {
+    margin-top: 15px;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2>HelloCall</h2>
+
+    <input id="user" placeholder="Username">
+    <input id="pass" type="password" placeholder="Password">
+
+    <button class="login" onclick="login()">Sign In</button>
+    <button class="signup" onclick="signup()">Sign Up</button>
+    <button class="google" onclick="googleSignIn()">Sign in with Google</button>
+
+    <div class="status" id="status"></div>
+</div>
+
+<script>
+/* 🔥 Fake Firebase Config (DEMO ONLY) */
+const firebaseConfig = {
+    apiKey: "FAKE-API-KEY-123456",
+    authDomain: "hellocall-demo.firebaseapp.com",
+    projectId: "hellocall-demo",
+    storageBucket: "hellocall-demo.appspot.com",
+    messagingSenderId: "0000000000",
+    appId: "1:0000000000:web:demo"
+};
+
+/* Fake Firebase Database */
+let fakeFirebaseDB = [];
+
+function login() {
+    const user = document.getElementById("user").value;
+    if (!user) return show("Enter username");
+    saveToFirebase(user, "login");
+}
+
+function signup() {
+    const user = document.getElementById("user").value;
+    if (!user) return show("Choose username");
+    saveToFirebase(user, "signup");
+}
+
+function googleSignIn() {
+    const googleUser = "google_user_" + Math.floor(Math.random()*10000);
+    saveToFirebase(googleUser, "google");
+}
+
+/* Simulated Firebase write */
+function saveToFirebase(username, method) {
+    const data = {
+        user: username,
+        method: method,
+        time: new Date().toLocaleString()
+    };
+    fakeFirebaseDB.push(data);
+    localStorage.setItem("hellocall_user", username);
+    show("✅ Auth success (" + method + ")<br>User: " + username);
+}
+
+/* UI */
+function show(msg) {
+    document.getElementById("status").innerHTML = msg;
+}
+</script>
+
+</body>
+</html>
