@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Android OS Mockup</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="status-bar">Time: 12:00 | Battery: 100%</div>
+  <h1>Home Screen</h1>
+  <div class="app-icons">
+    <button onclick="openApp('Dialer')">📞 Dialer</button>
+    <button onclick="openApp('Settings')">⚙️ Settings</button>
+    <button onclick="openApp('Login')">🔑 Login</button>
+  </div>
+
+  <script>
+    function openApp(app) {
+      if(app === 'Dialer') location.href = 'system_dialer.html';
+      else if(app === 'Settings') location.href = 'settings.html';
+      else if(app === 'Login') location.href = 'auth_firebase_demo.html';
+    }
+  </script>
+</body>
+</html>
