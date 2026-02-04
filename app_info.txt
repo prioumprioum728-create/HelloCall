@@ -1,0 +1,15 @@
+Application Name: HelloCall
+Type: Android Phone Dialer App
+Configuration: Firebase (Demo / Placeholder)
+
+License:
+This software is for educational and demonstration purposes only.
+All code, files, and examples are safe and do not access real Firebase or Google accounts.
+
+Notes:
+- Includes simulated login, sign-up, and Google Sign-In
+- Country selection: Bangladesh, United States, United Kingdom
+- Safe fake Firebase configuration used for practice
+
+--------------------------------------------------
+HelloCall All Rights Reserved ©
