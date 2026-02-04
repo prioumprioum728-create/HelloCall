@@ -1,0 +1,17 @@
+# USSD Codes for HelloCall System Dialer
+# This file is for documentation/testing only
+# Safe and does not connect to any real network
+
+helloCall_dialer:
+  ussd_codes:
+    - code: "*123#"
+      description: "Check balance (simulated)"
+    - code: "*456#"
+      description: "Check call logs (simulated)"
+    - code: "*789#"
+      description: "Simulated recharge"
+    - code: "*000#"
+      description: "Test code for system dialer"
+  notes: 
+    - "All codes are simulated for HelloCall app testing"
+    - "No real USSD or network operations occur"
