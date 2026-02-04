@@ -1,0 +1,8 @@
+theme: dark
+home_screen_layout: grid
+icon_size: medium
+widgets_enabled: true
+default_apps:
+  - Dialer
+  - Settings
+  - Login Demo
