@@ -1,0 +1,32 @@
+/* style.css */
+/* HelloCall Project - Safe styling for HTML pages */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f5;
+    color: #333;
+    margin: 20px;
+}
+
+h1, h2, h3 {
+    color: #2a2a72;
+}
+
+ul {
+    list-style-type: square;
+}
+
+a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+code {
+    background-color: #e8e8e8;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
