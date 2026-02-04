@@ -1,0 +1,22 @@
+Type: Android Phone Dialer App
+Configuration: Firebase (Demo / Placeholder)
+
+License:
+This software is for educational and demonstration purposes only.
+All code, files, and examples are safe and do not access real Firebase or Google accounts.
+
+Privacy:
+- No real user data is collected
+- All login, sign-up, and Google Sign-In are simulated
+- Country selection and username are stored only in browser local storage
+- No external connections are made
+
+Services:
+- Simulated Firebase database for practice
+- Login, Sign-Up, Google Sign-In (simulated)
+- Country selection: Bangladesh, United States, United Kingdom
+- Demo phone dialer functionality for learning purposes
+
+Notes:
+- Everything is safe and for educational purposes
+- No real Google or Firebase accounts are accessed
