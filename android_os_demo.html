@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HelloCall Android OS Demo</title>
+
+<!-- ===== CSS (combined) ===== -->
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0d1117;
+    color: white;
+}
+
+.status-bar {
+    background: #161b22;
+    padding: 8px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.screen {
+    padding: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.app-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.app {
+    background: #21262d;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.app:hover {
+    background: #30363d;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #238636;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+select, input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    border-radius: 6px;
+    border: none;
+}
+
+.back {
+    margin-top: 20px;
+    background: #8250df;
+}
+</style>
+</head>
+
+<body>
+
+<div class="status-bar">
+    HelloCall OS • Battery 100% • 12:00
+</div>
+
+<!-- ===== HOME SCREEN ===== -->
+<div id="home" class="screen">
+    <h2>Home Screen</h2>
+    <div class="app-grid">
+        <div class="app" onclick="openScreen('dialer')">📞 Dialer</div>
+        <div class="app" onclick="openScreen('settings')">⚙️ Settings</div>
+        <div class="app" onclick="openScreen('login')">🔐 Login</div>
+    </div>
+</div>
+
+<!-- ===== DIALER ===== -->
+<div id="dialer" class="screen hidden">
+    <h2>Dialer</h2>
+    <input placeholder="Enter number" />
+    <button>Call (Demo)</button>
+    <button class="back" onclick="goHome()">⬅ Back</button>
+</div>
+
+<!-- ===== SETTINGS ===== -->
+<div id="settings" class="screen hidden">
+    <h2>Settings</h2>
+    <p>Language: English</p>
+    <p>Version: HelloCall OS 0.1</p>
+    <button class="back" onclick="goHome()">⬅ Back</button>
+</div>
+
+<!-- ===== LOGIN / AUTH ===== -->
+<div id="login" class="screen hidden">
+    <h2>Login</h2>
+
+    <input id="username" placeholder="Username">
+
+    <select id="country">
+        <option value="">Select Country</option>
+        <option value="Bangladesh">Bangladesh</option>
+        <option value="United States">United States</option>
+        <option value="United Kingdom">United Kingdom</option>
+    </select>
+
+    <button onclick="login('Google')">Sign in with Google (Demo)</button>
+
+    <div id="output"></div>
+
+    <button class="back" onclick="goHome()">⬅ Back</button>
+</div>
+
+<!-- ===== JAVASCRIPT (combined) ===== -->
+<script>
+function openScreen(id) {
+    document.getElementById("home").classList.add("hidden");
+    document.getElementById(id).classList.remove("hidden");
+}
+
+function goHome() {
+    document.querySelectorAll(".screen").forEach(s => s.classList.add("hidden"));
+    document.getElementById("home").classList.remove("hidden");
+}
+
+function login(method) {
+    const user = document.getElementById("username").value;
+    const country = document.getElementById("country").value;
+
+    if (!user || !country) {
+        show("❌ Please enter username and select country");
+        return;
+    }
+
+    const data = {
+        user: user,
+        method: method,
+        country: country,
+        language: "English",
+        time: new Date().toLocaleString()
+    };
+
+    localStorage.setItem("hellocall_user", JSON.stringify(data));
+
+    show(
+        "✅ Login Success<br>" +
+        "User: " + user + "<br>" +
+        "Method: " + method + "<br>" +
+        "Country: " + country
+    );
+}
+
+function show(msg) {
+    document.getElementById("output").innerHTML = msg;
+}
+</script>
+
+</body>
+  </html>
