@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Your First App - HelloCall</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="load.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9fc;
+            color: #333;
+            padding: 20px;
+        }
+        h1 { color: #2a2a72; }
+        .terminal, .sql {
+            background-color: #1e1e1e;
+            color: #00ff00;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            margin-top: 20px;
+        }
+        .codeblock {
+            background-color: #e8e8e8;
+            padding: 2px 4px;
+            border-radius: 3px;
+            display: block;
+            margin-top: 10px;
+        }
+        .section {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body class="loading">
+    <div id="loader"></div>
+
+    <h1>Create Your First App</h1>
+    <p>Learn how to create your first HelloCall app safely! Includes terminal commands, SQL examples, Android SDK placeholders, and simulated fingerprints.</p>
+
+    <div class="section">
+        <h2>Terminal Simulation</h2>
+        <div class="terminal">
+            $ mkdir HelloCallApp<br>
+            $ cd HelloCallApp<br>
+            $ touch main.py<br>
+            $ echo "print('Hello World')" > main.py<br>
+            $ python3 main.py<br>
+            Hello World
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>SQL Example</h2>
+        <div class="sql">
+            import sqlite3<br>
+            conn = sqlite3.connect('call_logs.db')<br>
+            c = conn.cursor()<br>
+            c.execute('''CREATE TABLE logs (id INTEGER PRIMARY KEY, number TEXT, time TEXT, fingerprint TEXT)''')<br>
+            c.execute("INSERT INTO logs (number, time, fingerprint) VALUES ('1234567890', '12:00', '9876543210')")<br>
+            conn.commit()<br>
+            conn.close()
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Android SDK Placeholders (ADKs)</h2>
+        <ul>
+            <li>SDK: android-33 (placeholder)</li>
+            <li>Build Tools: 33.0.0 (placeholder)</li>
+            <li>Target API: 33 (placeholder)</li>
+        </ul>
+        <p>These are **simulated placeholders** for learning only.</p>
+    </div>
+
+    <div class="section">
+        <h2>Sample Fingerprint Numbers</h2>
+        <ul>
+            <li>9876543210</li>
+            <li>1234567890</li>
+            <li>1029384756</li>
+            <li>5647382910</li>
+            <li>0192837465</li>
+        </ul>
+        <p>All numbers are fake and safe for demonstration.</p>
+    </div>
+
+    <div class="section">
+        <h2>Notes</h2>
+        <ul>
+            <li>All examples are completely safe and simulated</li>
+            <li>No real device or Firebase credentials are used</li>
+            <li>Perfect for learning how Android, SQL, and fingerprints work</li>
+        </ul>
+    </div>
+
+    <script>
+        // Loader simulation
+        window.addEventListener("load", function() {
+            document.getElementById("loader").style.display = "none";
+            document.body.classList.remove("loading");
+        });
+    </script>
+</body>
+</html>
