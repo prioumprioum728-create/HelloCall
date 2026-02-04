@@ -1,0 +1,7 @@
+{
+  "os_name": "SimuDroid",
+  "version": "0.1-demo",
+  "language": "English",
+  "supported_countries": ["Bangladesh", "United States", "United Kingdom"],
+  "installed_apps": ["Dialer", "Settings", "Login Demo"]
+}
