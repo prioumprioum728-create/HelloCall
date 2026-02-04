@@ -1,0 +1,14 @@
+{
+  "app_name": "HelloCall",
+  "storage": {
+    "internal_storage": "E:",
+    "used_space": "500MB",
+    "total_space": "2GB"
+  },
+  "network": {
+    "wifi_connected": true,
+    "ssid": "Home_WiFi",
+    "ip_address": "192.168.1.100"
+  },
+  "description": "This file is a safe documentation of storage and Wi-Fi connection for the HelloCall app."
+}
