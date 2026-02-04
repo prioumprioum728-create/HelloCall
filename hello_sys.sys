@@ -1,0 +1,9 @@
+# hello_sys.sys
+# HelloCall Project – Safe System Placeholder
+# This file does NOT contain real system or driver code.
+# It is for documentation and project structure only.
+
+NAME=HelloCall System Placeholder
+VERSION=1.0
+STATUS=SAFE
+DESCRIPTION=This is a dummy .sys file used for learning and organization.
