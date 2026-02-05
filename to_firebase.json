@@ -1,0 +1,36 @@
+{
+  "app": {
+    "name": "HelloCall",
+    "package_name": "com.hellocall.hellocall",
+    "platform": "android",
+    "status": "demo"
+  },
+
+  "firebase": {
+    "connected": false,
+    "note": "This file is a Firebase configuration placeholder. Real connection requires Firebase SDK."
+  },
+
+  "project_info": {
+    "project_id": "o22tt-aa1e7",
+    "project_number": "366495577401"
+  },
+
+  "features": {
+    "auth": true,
+    "database": true,
+    "storage": true
+  },
+
+  "supported_countries": [
+    "Bangladesh",
+    "United States",
+    "United Kingdom"
+  ],
+
+  "language": "English",
+
+  "created_for": "GitHub educational project",
+  "owner": "HelloCall",
+  "license": "All rights reserved"
+}
