@@ -1,6 +1,6 @@
 {
   "project_info": {
-    "project_number": "366495577401", 
+    "project_number": "366495577401",
     "project_id": "hellocall-demo",
     "storage_bucket": "hellocall-demo.appspot.com"
   },
@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:366495577401:android:demohellocall",
         "android_client_info": {
-          "package_name": "com.hellocall.hellocall"
+          "package_name": "com.hellocall.earnwallet"
         }
       },
       "api_key": [
