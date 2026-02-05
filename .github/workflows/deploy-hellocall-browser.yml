@@ -1,0 +1,35 @@
+name: Build & Deploy HelloCall Website (Browser)
+
+on:
+  workflow_dispatch:   # You can run manually from GitHub
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1️⃣ Checkout your repository
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      # 2️⃣ Build HelloCall Website (your builder action)
+      - name: Build HelloCall Website
+        uses: ./action.yml
+        with:
+          site_title: "HelloCall OS"
+          theme_color: "blue"
+
+      # 3️⃣ Deploy to Firebase Hosting
+      - name: Firebase Deployment
+        uses: jmsalazardev/firebase-deploy@v0.0.3
+        with:
+          project_id: ${{ secrets.FIREBASE_PROJECT_ID }}
+          token: ${{ secrets.FIREBASE_TOKEN }}
+          only: hosting
+
+      # 4️⃣ Show live URLs in Actions log
+      - name: Show Website URLs
+        run: |
+          echo "✅ HelloCall Website Deployed!"
+          echo "Firebase Hosting: https://$FIREBASE_PROJECT_ID.web.app"
+          echo "GitHub Pages: https://$GITHUB_REPOSITORY_OWNER.github.io/$GITHUB_REPOSITORY/"
