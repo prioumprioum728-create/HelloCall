@@ -1,0 +1,23 @@
+{
+  "project_info": {
+    "project_number": "000000000000",
+    "project_id": "hellocall-demo",
+    "storage_bucket": "hellocall-demo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:000000000000:android:demohellocall",
+        "android_client_info": {
+          "package_name": "com.hellocall.demo"
+        }
+      },
+      "api_key": [
+        {
+          "current_key": "DEMO-KEY-NOT-REAL"
+        }
+      ]
+    }
+  ],
+  "configuration_version": "1"
+}
