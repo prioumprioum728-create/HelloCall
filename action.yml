@@ -1,0 +1,11 @@
+name: "HelloCall Website Builder"
+description: "Creates a simple website ready for GitHub Pages"
+author: "prioumprioum728"
+
+runs:
+  using: "node20"
+  main: "builder.js"
+
+branding:
+  icon: "globe"
+  color: "blue"
