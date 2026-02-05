@@ -1,7 +1,7 @@
 # 💖 Sponsor HelloCall!  
 
 Hi! Welcome to the **HelloCall Sponsor Guide**.  
-This shows you how to safely see and use the **Sponsor button** in the HelloCall repository.  
+This shows you how to safely support the HelloCall project.  
 
 ---
 
@@ -13,28 +13,31 @@ This shows you how to safely see and use the **Sponsor button** in the HelloCall
 
 ---
 
+## 🔹 Safe payment options (through parents)
+
+- **Google Pay**: Ask your parents to use it for donations.  
+- **bKash**: Parents can safely use bKash to support.  
+- **Trust Wallet**: Crypto donations only through parents.  
+- **CT Farm**: Only if parents approve for support.  
+
+> ⚠️ Important: Only your parents should handle any real money.  
+> You do **not** need to give bank info or manage payments yourself.  
+
+---
+
 ## 🔹 How it works
 
-- GitHub lets people **send a small donation** to support your HelloCall project.  
-- You **don’t need to handle the money** — your parents will take care of it. 👨‍👩‍👦  
-- You can also have **optional support links** for one-time donations.  
+- GitHub Sponsors button lets people safely support your project.  
+- You can show other payment options as links **for parents/family only**.  
+- Keep all info private and safe.  
 
 ---
 
-## 🔹 Safe rules
+## 🔹 Tips
 
-1. **Never share your email or password**. ❌  
-2. **Only your parents** should handle any money. ✅  
-3. If you want to add or change the Sponsor button, always **ask your parents first**.  
-
----
-
-## 🔹 Fun tip
-
-You can use this guide as a **little help page** in your HelloCall repo.  
-- Make it colorful with emojis 🌈  
-- Add extra instructions or pictures if you want  
-- Keep it **simple and safe** for anyone visiting your repo  
+- Add emojis 🌟 to make the guide fun.  
+- Make it clear it’s **for parents or trusted family only**.  
+- You can add instructions for each payment method safely.  
 
 ---
 
