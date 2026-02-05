@@ -1,7 +1,8 @@
 # .github/FUNDING.yml
+# This adds a Sponsor button to your hellocall repository
 
-# GitHub Sponsors
+# GitHub Sponsors (official GitHub option)
 github: ["YOUR_GITHUB_USERNAME"]
 
-# Optional: custom link (like family/friends help)
+# Optional custom link for one-time support ($10)
 custom: ["https://github.com/sponsors/YOUR_GITHUB_USERNAME?frequency=one-time&amount=10"]
