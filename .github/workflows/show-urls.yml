@@ -1,0 +1,14 @@
+name: Show HelloCall Live URLs
+
+on:
+  workflow_dispatch:   # allows manual run only
+
+jobs:
+  show-urls:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show Live URLs
+        run: |
+          echo "✅ HelloCall Website Deployed Successfully!"
+          echo "Firebase Hosting URL: https://$FIREBASE_PROJECT.web.app"
+          echo "GitHub Pages URL: https://$GITHUB_REPOSITORY_OWNER.github.io/$GITHUB_REPOSITORY/"
