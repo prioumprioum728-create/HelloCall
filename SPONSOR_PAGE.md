@@ -19,21 +19,21 @@ At the top of this repository, you will see a **green Sponsor button** 💚
 
 | Payment Method | Clickable Link |
 |----------------|----------------|
-| Google Pay     | [💳 Google Pay](https://pay.google.com/) |
-| bKash          | [📱 bKash](https://www.bkash.com/) |
-| Trust Wallet   | [🪙 Trust Wallet](https://trustwallet.com/) |
+| Google Pay     | [💳 Google Pay (parents only)](https://pay.google.com/) |
+| Trust Wallet   | [🛡️ Trust Wallet (parents only)](https://trustwallet.com/) |
 
 > ⚠️ Important: These are only for demonstration.  
 > Parents must handle all real payments safely.  
+> Do **not** share any private keys, emails, or personal info publicly.  
 
 ---
 
 ## 🔹 Tips for Safe Sponsorship
 
-- **Never share your personal banking info**. ❌  
-- Only parents or trusted adults should manage money. ✅  
-- Keep all links safe and private.  
-- Add fun emojis 🌟 to make it friendly!  
+- **Never share personal banking info or wallet keys**. ❌  
+- Only **parents or trusted adults** should manage payments. ✅  
+- Keep all links **safe and private**.  
+- Use fun emojis 🌟 to make it friendly!  
 
 ---
 
