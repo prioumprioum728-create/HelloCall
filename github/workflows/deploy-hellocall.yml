@@ -28,3 +28,11 @@ jobs:
           project_id: ${{ secrets.FIREBASE_PROJECT_ID }}
           token: ${{ secrets.FIREBASE_TOKEN }}
           only: hosting
+
+      # 4️⃣ Deploy to GitHub Pages (backup)
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v6
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./          # publish root folder, adjust if needed
+          publish_branch: gh-pages
