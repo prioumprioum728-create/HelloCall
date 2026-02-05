@@ -1,0 +1,6 @@
+SSH KEY STATUS
+--------------
+Type: Not generated
+Reason: Educational GitHub project
+Note: Real SSH keys must be generated locally and never shared.
+Project: com.hellocall.hellocall
