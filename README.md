@@ -26,3 +26,10 @@ This project is made for learning and demonstration purposes.
 3. For testing, allow temporary read/write:
 
 ```
+
+
+python -m venv venv       # create virtual environment
+source venv/bin/activate  # activate environment (Linux/macOS)
+# For Windows:
+# .\venv\Scripts\activate
+pip install -r requirements.txt
