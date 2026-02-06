@@ -1,0 +1,14 @@
+name: AI Demo V2 Workflow
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  run-demo:
+    runs-on: ubuntu-latest
+    env:
+      HELLOCALL_MODELS_TOKEN: ${{ secrets.HELLOCALL_MODELS_TOKEN }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run AI demo script v2
+        run: python scripts/ai_demo_v2.py
