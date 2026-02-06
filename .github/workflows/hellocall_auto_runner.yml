@@ -1,0 +1,59 @@
+name: HelloCall AI Runner + Email Verification
+
+on:
+  workflow_dispatch:        # Can be triggered manually
+  push:
+    branches: [ main ]     # Optional automatic trigger
+
+jobs:
+  setup-and-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      # -------------------------------
+      # Setup Deploy Key for Repo Access
+      # -------------------------------
+      - name: Setup Deploy Key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.HELLOCALL_DEPLOY_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+
+      # -------------------------------
+      # Generate Email Verification Code
+      # -------------------------------
+      - name: Generate Verification Code
+        id: gen_code
+        run: |
+          CODE=$(openssl rand -hex 3)   # 6-char hex code
+          echo "VERIFICATION_CODE=$CODE" >> $GITHUB_ENV
+
+      # -------------------------------
+      # Send Email with Verification Code
+      # -------------------------------
+      - name: Send Verification Email
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.example.com
+          server_port: 587
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: "HelloCall Email Verification"
+          to: "user@example.com"                      # Replace with actual recipient
+          from: "HelloCall AI <noreply@hellocall.com>"
+          body: |
+            Hello! Your HelloCall verification code is:
+
+            ${{ env.VERIFICATION_CODE }}
+
+            Please enter this code in your app to confirm your email.
+
+      # -------------------------------
+      # Run AI Runner Script
+      # -------------------------------
+      - name: Run AI Runner
+        run: |
+          python scripts/ai_runner_with_app_key.py
