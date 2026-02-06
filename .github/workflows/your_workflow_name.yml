@@ -1,0 +1,10 @@
+name: HelloCall Workflow Demo
+on: [push]
+
+jobs:
+  run-demo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run Python script
+        run: python scripts/run_github_models_demo.py
