@@ -1,0 +1,33 @@
+name: HelloCall Email Notifications
+
+on:
+  push:
+    branches: [ main ]  # Trigger on push; you can change triggers
+
+jobs:
+  send-email:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Send Email Notification
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.example.com           # Replace with your SMTP server
+          server_port: 587                           # Replace with your server port
+          username: ${{ secrets.EMAIL_USERNAME }}   # Store email username in Secrets
+          password: ${{ secrets.EMAIL_PASSWORD }}   # Store email password in Secrets
+          subject: "HelloCall Notification"
+          to: "user@example.com"                     # Recipient email
+          from: "HelloCall AI <noreply@hellocall.com>" # Sender name + email
+          body: |
+            Hello! This is a notification from HelloCall AI.
+
+            Please verify your email to confirm notifications:
+
+            [Verify Email](https://github.com/prioumprioum728/HelloCall/verify-email)
+
+      - name: Confirm Email Verification
+        run: |
+          echo "Email verification link sent. Recipient must click to confirm."
