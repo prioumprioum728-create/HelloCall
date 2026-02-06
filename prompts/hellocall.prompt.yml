@@ -1,0 +1,18 @@
+name: HelloCall Demo Prompt
+description: |
+  HelloCall / EarnWallet Demo is a safe learning project for kids.
+  It simulates a wallet and coin system in a safe environment.
+  Features:
+    - Free trial with 500 coins
+    - Earn coins demo
+    - Spend coins demo
+  No real money is used. Parents handle any real payments outside this demo.
+  Safe to explore on Android, Unity, or browser.
+model: openai
+icon: https://raw.githubusercontent.com/prioumprioum728/hellocall/main/assets/hellocall-logo.png
+tags:
+  - demo
+  - learning
+  - wallet
+  - coins
+  - kid-friendly
