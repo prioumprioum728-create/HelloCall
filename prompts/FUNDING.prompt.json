@@ -1,0 +1,6 @@
+{
+  "name": "HelloCall FUNDING Demo",
+  "description": "This is a safe demo showing how the Sponsor button would work. No real money is used. Parents handle any real payments outside this demo.",
+  "model": "openai",
+  "tags": ["demo", "funding", "sponsor", "wallet", "kid-friendly"]
+}
