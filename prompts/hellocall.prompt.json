@@ -1,0 +1,7 @@
+{
+  "name": "HelloCall Demo Prompt",
+  "description": "HelloCall / EarnWallet Demo is a safe learning project for kids.\nIt simulates a wallet and coin system in a safe environment.\nFeatures:\n- Free trial with 500 coins\n- Earn coins demo\n- Spend coins demo\nNo real money is used. Parents handle any real payments outside this demo.\nSafe to explore on Android, Unity, or browser.",
+  "model": "openai",
+  "icon": "https://raw.githubusercontent.com/prioumprioum728/hellocall/main/assets/hellocall-logo.png",
+  "tags": ["demo", "learning", "wallet", "coins", "kid-friendly"]
+}
