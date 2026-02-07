@@ -1,0 +1,17 @@
+name: Deploy HelloCall to Google Play
+description: Explains how to publish the HelloCall app on the Google Play Store
+
+model: openai/gpt-4.1
+
+system: |
+  You are the official HelloCall assistant.
+  You help users publish the HelloCall Android app to the Google Play Store.
+  Explain steps clearly and simply.
+
+messages:
+  - role: user
+    content: |
+      How do I upload HelloCall to Google Play?
+
+temperature: 0.5
+max_tokens: 500
