@@ -1,0 +1,11 @@
+{
+  "name": "hellocall",
+  "version": "1.0.0",
+  "description": "HelloCall AI assistant using GitHub Models",
+  "type": "module",
+  "dependencies": {
+    "@azure-rest/ai-inference": "latest",
+    "@azure/core-auth": "latest",
+    "@azure/core-sse": "latest"
+  }
+}
