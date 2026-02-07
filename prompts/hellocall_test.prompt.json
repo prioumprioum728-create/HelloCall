@@ -1,0 +1,14 @@
+{
+  "name": "HelloCall Test Prompt",
+  "description": "A small test to run HelloCall AI without consuming many tokens or touching other files.",
+  "model": "openai/gpt-4.1",
+  "system": "You are a friendly assistant that answers HelloCall test questions. Keep responses short and simple.",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Say hello in one sentence and give a test message for HelloCall AI."
+    }
+  ],
+  "temperature": 0.2,
+  "max_tokens": 50
+}
