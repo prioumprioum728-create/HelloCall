@@ -1,0 +1,23 @@
+# GitHub Pages configuration for HelloCall
+
+title: HelloCall
+description: AI-powered call assistant project
+baseurl: ""          # keep empty for root
+url: "https://prioumprioum728-create.github.io/HelloCall"
+
+# Set homepage
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: home
+      permalink: /home.html
+
+# Custom pages
+collections:
+  download:
+    output: true
+    permalink: /getapp.html
+
+# Theme optional
+theme: minima
