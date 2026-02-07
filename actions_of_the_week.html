@@ -1,0 +1,84 @@
+<!DOCTYPE html><html>
+<head>
+<meta charset="UTF-8">
+<title>HelloCall - Actions Of The Week</title><style>
+body{
+    background:#0f172a;
+    color:white;
+    font-family:Arial;
+    margin:0;
+}
+
+header{
+    background:#1e293b;
+    padding:15px;
+    text-align:center;
+    font-size:26px;
+    font-weight:bold;
+}
+
+.card{
+    background:#1e293b;
+    margin:15px;
+    padding:15px;
+    border-radius:12px;
+    box-shadow:0 0 10px #000;
+}
+
+.button{
+    background:#22c55e;
+    padding:10px;
+    border-radius:8px;
+    text-align:center;
+    margin-top:10px;
+    cursor:pointer;
+}
+
+.button:hover{
+    background:#16a34a;
+}
+
+footer{
+    background:#020617;
+    padding:10px;
+    text-align:center;
+    margin-top:25px;
+    font-size:12px;
+}
+</style></head><body><header>HelloCall ☎ Actions Of The Week</header><div id="actions"></div><script>
+// JSON DATA (this is the robot brain memory)
+const weeklyActions = [
+ {name:"Call Mom", desc:"Don't forget to call your family", reward:"⭐ +10"},
+ {name:"Try HelloCall Dialer", desc:"Open the dialer and make a test call", reward:"⭐ +20"},
+ {name:"Add a Contact", desc:"Save at least 1 phone number", reward:"⭐ +15"},
+ {name:"Open Settings", desc:"Change ringtone or theme", reward:"⭐ +5"}
+];
+
+// Show on screen
+const container = document.getElementById("actions");
+
+weeklyActions.forEach(action=>{
+   const box = document.createElement("div");
+   box.className="card";
+
+   box.innerHTML = `
+   <h2>${action.name}</h2>
+   <p>${action.desc}</p>
+   <b>Reward: ${action.reward}</b>
+   <div class="button" onclick="completeAction('${action.name}')">
+   Mark Completed
+   </div>
+   `;
+
+   container.appendChild(box);
+});
+
+// When user presses button
+function completeAction(name){
+   alert("Good job! You completed: " + name);
+}
+</script><footer>
+HelloCall © 2026<br>
+hellocall.com | Terms | Settings | Contacts
+</footer></body>
+</html>
