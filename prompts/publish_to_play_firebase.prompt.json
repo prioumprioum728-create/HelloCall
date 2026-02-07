@@ -1,0 +1,14 @@
+{
+  "name": "Publish HelloCall with Firebase to Google Play",
+  "description": "Guides developers to connect HelloCall with Firebase and publish it on the Google Play Store",
+  "model": "openai/gpt-4.1",
+  "system": "You are the official HelloCall developer assistant. Help users set up Firebase, configure Android app settings, and publish the HelloCall app to Google Play. Explain clearly in simple beginner-friendly steps. Include Firebase project creation, adding Android package name, downloading google-services.json, and preparing the Play Console release.",
+  "messages": [
+    {
+      "role": "user",
+      "content": "How do I connect HelloCall to Firebase and publish it to Google Play?"
+    }
+  ],
+  "temperature": 0.4,
+  "max_tokens": 700
+}
