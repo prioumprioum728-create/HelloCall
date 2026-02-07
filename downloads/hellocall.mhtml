@@ -1,0 +1,55 @@
+From: <Saved by Browser>
+Subject: HelloCall Website Registration
+Date: Thu, 07 Feb 2026 00:00:00 +0000
+MIME-Version: 1.0
+Content-Type: multipart/related; boundary="----=_NextPart_000_0000"
+
+------=_NextPart_000_0000
+Content-Type: text/html; charset="utf-8"
+Content-Location: file:///hellocall.mhtml
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HelloCall Website</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; padding: 30px; }
+    h1 { color: #2c3e50; }
+    .logo { width: 150px; height: 150px; margin-bottom: 20px; }
+    .btn {
+      display: inline-block;
+      padding: 15px 25px;
+      font-size: 18px;
+      margin: 10px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: white;
+      background-color: #3498db;
+    }
+    .btn:hover { background-color: #2980b9; }
+    p.footer { margin-top: 50px; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <!-- Logo -->
+  <img src="hellocall_app_logo.png" alt="HelloCall Logo" class="logo">
+
+  <h1>Welcome to HelloCall</h1>
+  <p>Your AI-powered call assistant project.</p>
+
+  <h2>Access the Website</h2>
+  <a class="btn" href="https://prioumprioum728-create.github.io/HelloCall/hellocall_site.html" target="_blank">Go to Homepage</a>
+  <a class="btn" href="https://prioumprioum728-create.github.io/HelloCall/hellocall_site.html#download" target="_blank">Go to Download Page</a>
+
+  <h2>Links</h2>
+  <ul style="list-style:none;">
+    <li><a href="https://prioumprioum728-create.github.io/HelloCall/privacy_policy.html" target="_blank">Privacy Policy</a></li>
+    <li><a href="https://prioumprioum728-create.github.io/HelloCall/terms_of_service.html" target="_blank">Terms of Service</a></li>
+  </ul>
+
+  <p class="footer">HelloCall © 2026 | Built for learning & testing purposes</p>
+</body>
+</html>
+
+------=_NextPart_000_0000--
