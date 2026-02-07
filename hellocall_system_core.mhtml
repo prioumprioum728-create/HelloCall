@@ -1,0 +1,85 @@
+<!DOCTYPE html><html>
+<head>
+<meta charset="UTF-8">
+<title>HelloCall Core System</title><style>
+body{
+ background:#020617;
+ color:#e2e8f0;
+ font-family:Consolas,monospace;
+ padding:20px;
+}
+.panel{
+ background:#0f172a;
+ border-radius:12px;
+ padding:14px;
+ margin-top:18px;
+ box-shadow:0 0 8px #000;
+}
+h1{color:#22c55e;text-align:center;}
+h2{color:#38bdf8;}
+pre{color:#22c55e;}
+button{
+ background:#22c55e;
+ border:none;
+ padding:8px 12px;
+ border-radius:8px;
+ cursor:pointer;
+}
+</style><script>
+const systemInfo = {
+ app: "HelloCall",
+ version: "1.0 beta",
+ ai_engine: "OpenAI-5 simulated",
+ cloud: "Microsoft Azure simulated",
+ encryption: "OpenSSL secure layer",
+ mode: "development"
+};
+
+function loadInfo(){
+ document.getElementById("sys").innerText =
+ JSON.stringify(systemInfo,null,2);
+}
+</script></head><body><h1>HelloCall System Core</h1><div class="panel">
+<h2>Service Status</h2>
+<p>Dialer: Online</p>
+<p>Contacts: Ready</p>
+<p>Notifications: Ready</p>
+</div><div class="panel">
+<h2>Security Layer</h2>
+<pre>
+TLS Version: 1.3
+Encryption: AES-256
+Certificate: Active
+Provider: OpenSSL
+</pre>
+</div><div class="panel">
+<h2>Cloud Provider</h2>
+<pre>
+Platform: Microsoft Azure
+AI Assistant: OpenAI GPT-5 Module
+Connection Mode: Local Simulation
+</pre>
+</div><div class="panel">
+<h2>Deployment (.yml example)</h2>
+<pre>
+name: hellocall-cloudon:
+push:
+branches: [ main ]
+
+jobs:
+run:
+runs-on: ubuntu-latest
+steps:
+- name: Start Service
+run: echo "HelloCall starting..."
+
+  - name: Connect AI
+    run: echo "AI ready"
+
+</pre>
+</div><div class="panel">
+<h2>System JSON Data</h2>
+<button onclick="loadInfo()">Load Config</button>
+<pre id="sys"></pre>
+</div></body>
+</html>
