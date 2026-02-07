@@ -1,0 +1,78 @@
+<!DOCTYPE html><html>
+<head>
+<meta charset="UTF-8">
+<title>HelloCall Incoming Call</title><style>
+body{
+  margin:0;
+  background:linear-gradient(#0f172a,#020617);
+  color:white;
+  font-family:Arial;
+  text-align:center;
+}
+
+.caller{
+  margin-top:80px;
+}
+
+.avatar{
+  width:130px;
+  height:130px;
+  border-radius:100px;
+  background:#1e293b;
+  margin:auto;
+  line-height:130px;
+  font-size:40px;
+}
+
+.name{
+  font-size:28px;
+  margin-top:15px;
+}
+
+.number{
+  color:#94a3b8;
+  margin-top:5px;
+}
+
+.buttons{
+  position:fixed;
+  bottom:80px;
+  width:100%;
+}
+
+.btn{
+  width:80px;
+  height:80px;
+  border-radius:50%;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  font-size:26px;
+  margin:25px;
+  cursor:pointer;
+}
+
+.accept{
+  background:#22c55e;
+}
+
+.decline{
+  background:#ef4444;
+}
+</style><script>
+function acceptCall(){
+  alert("Call connected 📞");
+}
+
+function declineCall(){
+  alert("Call ended");
+}
+</script></head><body><div class="caller">
+  <div class="avatar">👤</div>
+  <div class="name">Unknown Caller</div>
+  <div class="number">+880 0000 000000</div>
+</div><div class="buttons">
+  <div class="btn decline" onclick="declineCall()">✖</div>
+  <div class="btn accept" onclick="acceptCall()">✔</div>
+</div></body>
+</html>
