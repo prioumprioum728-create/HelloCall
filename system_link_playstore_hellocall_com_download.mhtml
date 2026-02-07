@@ -1,0 +1,41 @@
+From: <Saved by Browser>
+Subject: HelloCall Download Page
+Date: Thu, 07 Feb 2026 00:00:00 +0000
+MIME-Version: 1.0
+Content-Type: multipart/related; boundary="----=_NextPart_000_0000"
+
+------=_NextPart_000_0000
+Content-Type: text/html; charset="utf-8"
+Content-Location: file:///system_link_playstore_hellocall_com_download.mhtml
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HelloCall Download Link</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+    a.button {
+      display: inline-block;
+      padding: 15px 25px;
+      font-size: 18px;
+      background-color: #3498db;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      margin: 10px;
+    }
+    a.button:hover { background-color: #2980b9; }
+  </style>
+</head>
+<body>
+  <h1>HelloCall App</h1>
+  <p>Click the button below to go to the HelloCall Play Store download page:</p>
+  <a class="button" href="https://prioumprioum728-create.github.io/HelloCall/hellocall_site.html" target="_blank">
+    Go to Download Page
+  </a>
+  <p>Or scroll down for APK / DEF files when available.</p>
+</body>
+</html>
+
+------=_NextPart_000_0000--
