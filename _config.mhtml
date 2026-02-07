@@ -1,0 +1,86 @@
+<!DOCTYPE html><html>
+<head>
+<meta charset="UTF-8">
+<title>HelloCall System Config</title><style>
+body{
+  background:#020617;
+  color:#e2e8f0;
+  font-family:Consolas, monospace;
+  padding:20px;
+}
+h1{
+  color:#38bdf8;
+  text-align:center;
+}
+.panel{
+  background:#0f172a;
+  padding:15px;
+  margin-top:20px;
+  border-radius:12px;
+  box-shadow:0 0 10px #000;
+}
+code{
+  color:#22c55e;
+  white-space:pre-wrap;
+}
+.badge{
+  background:#1d4ed8;
+  padding:4px 8px;
+  border-radius:6px;
+}
+</style></head><body><h1>HelloCall System Configuration</h1><div class="panel">
+<h2>OpenSSL Secure Layer</h2>
+<code>
+protocol: TLSv1.3
+encryption: AES-256
+certificate: active
+status: secure
+</code>
+</div><div class="panel">
+<h2>Microsoft Azure Service</h2>
+<code>
+cloud_provider: Microsoft Azure
+region: global
+ai_inference: enabled
+speech_services: standby
+identity: managed
+</code>
+</div><div class="panel">
+<h2>OpenAI Model</h2>
+<code>
+model_family: GPT-5
+purpose: call assistant
+mode: chat inference
+safety_layer: enabled
+</code>
+</div><div class="panel">
+<h2>Founder Information</h2>
+<code>
+project: HelloCall
+type: educational project
+maintainer: Prioum
+status: development
+</code>
+</div><div class="panel">
+<h2>Deployment (.yml simulation)</h2>
+<code>
+name: hellocall-deployon:
+push:
+branches: [ main ]
+
+jobs:
+build:
+runs-on: ubuntu-latest
+steps:
+- name: Setup OpenSSL
+run: echo "openssl ready"
+
+  - name: Connect Azure
+    run: echo "azure connected"
+
+  - name: Start AI Service
+    run: echo "openai model started"
+
+</code>
+</div></body>
+</html>
