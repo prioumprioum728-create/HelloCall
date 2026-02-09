@@ -1,0 +1,47 @@
+From: <Saved by Blink>
+Subject: HelloCall Homepage
+Content-Type: text/html
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HelloCall Homepage</title>
+<style>
+body {background:#0f172a; color:#fff; font-family:sans-serif; display:flex; flex-direction:column; align-items:center; padding:20px;}
+h1 {color:#22c55e;}
+a {color:#22c55e; margin:8px; text-decoration:none; font-size:20px;}
+a:hover {text-decoration:underline;}
+img {width:150px; margin:20px;}
+</style>
+</head>
+<body>
+
+<h1>Welcome to HelloCall</h1>
+<img src="hellocall_logo.png" alt="HelloCall Logo">
+
+<p>
+<a href="hello_store.mhtml">Open HelloCall Store</a><br>
+<a href="hello_creator.mhtml">Create Your App</a><br>
+<a href="hello_editor.mhtml">Open App Editor</a><br>
+<a href="hello_billing.mhtml">Billing / Premium</a><br>
+<a href="hello_dialer.mhtml">Open Dialer</a>
+</p>
+
+<script>
+// TypeScript snippet
+// let greeting: string = "Welcome to HelloCall Homepage!";
+// console.log(greeting);
+
+// Python snippet
+// print("Welcome to HelloCall Homepage!")
+
+// C# snippet
+// Console.WriteLine("Welcome to HelloCall Homepage!");
+
+// C snippet
+// printf("Welcome to HelloCall Homepage!\n");
+</script>
+
+</body>
+</html>
