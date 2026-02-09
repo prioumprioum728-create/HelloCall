@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HelloCall App Creator</title>
+<style>
+body{background:#0f172a;color:#fff;font-family:Arial,sans-serif;padding:20px;}
+h1{text-align:center;color:#22c55e;}
+.card{background:#111827;padding:20px;margin:12px;border-radius:12px;}
+input{width:100%;padding:10px;margin:8px 0;border-radius:8px;border:none;font-size:16px;}
+button{padding:12px 18px;border:none;border-radius:10px;background:#22c55e;color:#000;font-size:16px;cursor:pointer;margin-top:10px;}
+pre{background:#1e293b;padding:12px;border-radius:10px;overflow:auto;white-space:pre-wrap;}
+</style>
+</head>
+<body>
+
+<h1>HelloCall App Creator</h1>
+
+<div class="card" id="noApps">
+  <h2>No apps created yet</h2>
+  <p>Click below to create your first app</p>
+  <button onclick="showForm()">Create App</button>
+</div>
+
+<div class="card" id="createForm" style="display:none;">
+  <h2>Create Your App</h2>
+  <label>Enter your app URL (e.g. yourapp.company.com):</label>
+  <input type="text" id="appUrl" placeholder="yourapp.company.com">
+  
+  <button onclick="deployApp()">Deploy App</button>
+</div>
+
+<div class="card" id="deployed" style="display:none;">
+  <h2>App Deployed Successfully!</h2>
+  <p>Copy and use the following commands:</p>
+  <pre id="showCommands"></pre>
+</div>
+
+<script>
+function showForm(){
+  document.getElementById('noApps').style.display='none';
+  document.getElementById('createForm').style.display='block';
+}
+
+function deployApp(){
+  const url = document.getElementById('appUrl').value || "yourapp.company.com";
+  
+  document.getElementById('createForm').style.display='none';
+  document.getElementById('deployed').style.display='block';
+  
+  // Separate lines exactly
+  const commands = "deploy " + url + "\ninstall hellocall-sdk";
+  document.getElementById('showCommands').textContent = commands;
+}
+</script>
+
+</body>
+</html>
