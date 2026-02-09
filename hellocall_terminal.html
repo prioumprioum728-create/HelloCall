@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HelloCall Terminal</title>
+<style>
+body{background:#0f172a;color:#fff;font-family:monospace;padding:20px;}
+#terminal{background:#111827;padding:15px;border-radius:10px;height:400px;overflow-y:auto;}
+input{width:100%;padding:10px;border:none;border-radius:6px;font-size:16px;background:#1e293b;color:#fff;}
+button{padding:8px 12px;margin-top:10px;border:none;border-radius:6px;background:#22c55e;color:#000;cursor:pointer;}
+.line{margin:2px 0;}
+</style>
+</head>
+<body>
+
+<h1>HelloCall Terminal</h1>
+
+<div id="terminal">
+<div class="line">Welcome to HelloCall terminal!</div>
+</div>
+
+<input type="text" id="commandInput" placeholder="Type command..." onkeydown="if(event.key==='Enter'){runCommand();}">
+<button onclick="runCommand()">Run Command</button>
+
+<script>
+const terminal = document.getElementById('terminal');
+
+function runCommand(){
+  const input = document.getElementById('commandInput').value.trim();
+  if(!input) return;
+  
+  const line = document.createElement('div');
+  line.className = 'line';
+  line.textContent = '> ' + input;
+  terminal.appendChild(line);
+  
+  // Check if deploy command
+  if(input.startsWith('deploy ')){
+    const url = input.slice(7);
+    const result = document.createElement('div');
+    result.className = 'line';
+    result.textContent = 'Deploying ' + url + ' ... Done!';
+    terminal.appendChild(result);
+    
+    const sdkLine = document.createElement('div');
+    sdkLine.className = 'line';
+    sdkLine.textContent = 'install hellocall-sdk';
+    terminal.appendChild(sdkLine);
+    
+  } else {
+    const unknown = document.createElement('div');
+    unknown.className = 'line';
+    unknown.textContent = 'Command not recognized.';
+    terminal.appendChild(unknown);
+  }
+  
+  terminal.scrollTop = terminal.scrollHeight;
+  document.getElementById('commandInput').value='';
+}
+</script>
+
+</body>
+</html>
