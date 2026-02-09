@@ -1,0 +1,24 @@
+{
+  "systemFile": true,
+  "fileName": "1129300939.sys.json",
+  "version": "1.0.0",
+  "description": "System config for assets & Firebase integration",
+  "createdAt": "2026-02-09T17:00:00Z",
+  "firebase": {
+    "projectId": "my-awesome-project",
+    "database": {
+      "rules": {
+        ".read": "auth != null",
+        ".write": "auth != null"
+      }
+    },
+    "storage": {
+      "rules": "allow read, write: if request.auth != null;"
+    }
+  },
+  "systemCode": [
+    "initAssets();",
+    "loadConfig();",
+    "connectFirebase();"
+  ]
+}
