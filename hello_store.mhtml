@@ -1,0 +1,42 @@
+From: <Saved by Blink>
+Subject: HelloCall Store
+Content-Type: text/html
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HelloCall Store</title>
+<style>
+body{background:#0f172a;color:#fff;font-family:sans-serif;padding:20px;display:flex;flex-direction:column;align-items:center;}
+h1{color:#22c55e;}
+button{padding:10px 20px;margin:10px;border:none;border-radius:8px;background:#22c55e;color:#000;cursor:pointer;font-size:18px;}
+</style>
+</head>
+<body>
+
+<h1>HelloCall App Store</h1>
+
+<p>Manage apps and settings:</p>
+
+<button onclick="alert('Create App clicked!')">Create App</button>
+<button onclick="alert('Upgrade to Premium clicked!')">Upgrade to Premium</button>
+<button onclick="alert('Settings clicked!')">Settings</button>
+
+<script>
+// TS snippet
+// let storeMessage: string = "HelloCall Store loaded!";
+// console.log(storeMessage);
+
+// Python snippet
+// print("HelloCall Store loaded!")
+
+// C# snippet
+// Console.WriteLine("HelloCall Store loaded!");
+
+// C snippet
+// printf("HelloCall Store loaded!\n");
+</script>
+
+</body>
+</html>
