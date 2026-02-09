@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HelloCall App Editor</title>
+<style>
+body{background:#0f172a;color:#fff;font-family:monospace;padding:20px;}
+.card{background:#111827;padding:15px;margin:12px;border-radius:12px;}
+input, textarea{width:100%;padding:8px;margin:6px 0;border-radius:6px;border:none;font-size:16px;background:#1e293b;color:#fff;}
+button{padding:8px 12px;margin:6px 0;border:none;border-radius:6px;background:#22c55e;color:#000;cursor:pointer;}
+.file-item{background:#1e293b;padding:6px;border-radius:6px;margin:4px 0;}
+</style>
+</head>
+<body>
+
+<h1>HelloCall App Editor</h1>
+
+<div class="card" id="createAppDiv">
+<h2>Create New App</h2>
+<label>App URL:</label>
+<input type="text" id="appName" placeholder="yourapp.company.com">
+<button onclick="createApp()">Create App</button>
+</div>
+
+<div class="card" id="editorDiv" style="display:none;">
+<h2 id="appTitle"></h2>
+<p>Manage your files below:</p>
+
+<div id="fileList"></div>
+
+<label>File Name:</label>
+<input type="text" id="fileName" placeholder="example.js">
+<label>File Content:</label>
+<textarea id="fileContent" rows="5">// Type your code here</textarea>
+<button onclick="addFile()">Add / Update File</button>
+</div>
+
+<script>
+// Load apps from localStorage
+let currentApp = null;
+let apps = JSON.parse(localStorage.getItem('helloApps')||'{}');
+
+function createApp(){
+  const name = document.getElementById('appName').value.trim();
+  if(!name){ alert("Enter app URL!"); return; }
+  if(!apps[name]) apps[name]={files:{}};
+  currentApp = name;
+  localStorage.setItem('helloApps', JSON.stringify(apps));
+  showEditor();
+}
+
+function showEditor(){
+  document.getElementById('createAppDiv').style.display='none';
+  document.getElementById('editorDiv').style.display='block';
+  document.getElementById('appTitle').textContent = "Editing App: " + currentApp;
+  renderFiles();
+}
+
+function renderFiles(){
+  const fileListDiv = document.getElementById('fileList');
+  fileListDiv.innerHTML='';
+  const files = apps[currentApp].files;
+  for(const fname in files){
+    const div = document.createElement('div');
+    div.className='file-item';
+    div.textContent = fname;
+    div.onclick=()=>{document.getElementById('fileName').value=fname; document.getElementById('fileContent').value=files[fname];};
+    fileListDiv.appendChild(div);
+  }
+}
+
+function addFile(){
+  const fname = document.getElementById('fileName').value.trim();
+  const content = document.getElementById('fileContent').value;
+  if(!fname){ alert("Enter file name!"); return; }
+  apps[currentApp].files[fname]=content;
+  localStorage.setItem('helloApps', JSON.stringify(apps));
+  renderFiles();
+  alert("File saved!");
+}
+</script>
+
+</body>
+</html>
