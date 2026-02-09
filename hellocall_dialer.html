@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HelloCall Dialer</title>
+<style>
+body{background:#0f172a;color:#fff;font-family:sans-serif;padding:20px;display:flex;flex-direction:column;align-items:center;}
+h1{text-align:center;color:#22c55e;}
+.dialer{display:grid;grid-template-columns:repeat(3,80px);grid-gap:10px;margin-top:20px;}
+button{padding:20px;font-size:22px;border:none;border-radius:10px;background:#22c55e;color:#000;cursor:pointer;}
+#callDisplay{width:250px;height:50px;margin-bottom:15px;background:#1e293b;border-radius:10px;padding:10px;font-size:24px;text-align:right;}
+.control-btn{grid-column:span 3;background:#ff9900;}
+</style>
+</head>
+<body>
+
+<h1>HelloCall Dialer</h1>
+<div id="callDisplay"></div>
+
+<div class="dialer">
+  <button onclick="press('1')">1</button>
+  <button onclick="press('2')">2</button>
+  <button onclick="press('3')">3</button>
+  
+  <button onclick="press('4')">4</button>
+  <button onclick="press('5')">5</button>
+  <button onclick="press('6')">6</button>
+  
+  <button onclick="press('7')">7</button>
+  <button onclick="press('8')">8</button>
+  <button onclick="press('9')">9</button>
+  
+  <button style="grid-column:span 2;" onclick="press('0')">0</button>
+  <button onclick="backspace()">⌫</button>
+  
+  <button class="control-btn" onclick="call()">📞 Call</button>
+</div>
+
+<script>
+let number = '';
+
+function press(digit){
+  number += digit;
+  document.getElementById('callDisplay').textContent = number;
+}
+
+function backspace(){
+  number = number.slice(0,-1);
+  document.getElementById('callDisplay').textContent = number;
+}
+
+function call(){
+  if(!number) { alert('Enter a number first!'); return; }
+  alert('Calling ' + number + '... (simulation)');
+  number='';
+  document.getElementById('callDisplay').textContent = '';
+}
+</script>
+
+</body>
+</html>
