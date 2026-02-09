@@ -1,0 +1,23 @@
+{
+  "app": {
+    "bundle_id": "hellocall.hellocall.com",
+    "name": "Hellocall SIM Messaging",
+    "platform": "android",
+    "version": "1.0.0"
+  },
+  "system": "sim_phone_verification",
+  "firebase": {
+    "project_id": "hellocall-sim-project",
+    "app_id": "hellocall-sim-app-id",
+    "phone_auth_enabled": true
+  },
+  "verification": {
+    "method": "SMS",
+    "test_phone_numbers": [
+      "+15555550123",
+      "+15555550456"
+    ],
+    "code_length": 6
+  },
+  "notes": "Simulated phone verification JSON for Hellocall SIM Messaging app using Firebase CLI."
+}
