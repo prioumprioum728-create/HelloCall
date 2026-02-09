@@ -1,0 +1,19 @@
+{
+  "system": "sim_phone_verification",
+  "platform": "hellocall",
+  "firebase": {
+    "project_id": "your-project-id",
+    "app_id": "your-app-id",
+    "phone_auth_enabled": true
+  },
+  "verification": {
+    "method": "SMS",
+    "test_phone_numbers": [
+      "+15555550123",
+      "+15555550456"
+    ],
+    "code_length": 6
+  },
+  "version": "1.0.0",
+  "notes": "This file configures phone verification simulation for Firebase CLI."
+}
