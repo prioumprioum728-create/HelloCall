@@ -1,0 +1,75 @@
+<!DOCTYPE html><html>
+<head>
+<meta charset="UTF-8">
+<title>HelloCall Billing Center</title><style>
+body{
+font-family: Arial;
+background:#eef3ff;
+margin:0;
+padding:20px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:14px;
+box-shadow:0 4px 12px rgba(0,0,0,0.12);
+margin-bottom:20px;
+}
+
+h2{
+color:#2d5cff;
+}
+
+button{
+padding:12px 18px;
+border:none;
+border-radius:10px;
+background:#2d5cff;
+color:white;
+font-size:16px;
+cursor:pointer;
+}
+
+.crypto{
+background:#ff9900;
+}
+
+.small{
+color:gray;
+font-size:13px;
+}
+</style></head><body><h1>HelloCall Payments & Verification</h1><div class="card">
+<h2>KYC / Verification</h2>
+<p>
+HelloCall does not store passport, NID, or face information.
+Identity verification is handled by payment providers for safety.
+</p><ul>
+<li>Fraud protection</li>
+<li>Secure payments</li>
+<li>User safety</li>
+</ul><p class="small">
+Verification may be requested by your payment provider (bKash, card processor, or crypto wallet service).
+</p>
+</div><div class="card">
+<h2>Payment Methods</h2>
+<ul>
+<li>bKash</li>
+<li>Nagad</li>
+<li>Visa / Mastercard</li>
+<li>Google Pay</li>
+<li>Cryptocurrency</li>
+</ul>
+</div><div class="card">
+<h2>Buy HelloCall Premium</h2>
+<p>Price: 100 BDT / $1</p><button onclick="alert('bKash payment will open here');">
+Pay with bKash
+</button><br><br>
+
+<button class="crypto" onclick="window.open('https://example-crypto-payment-link.com')">
+Pay with Crypto
+</button><p class="small">
+Crypto payments are processed by external wallet providers.
+</p>
+</div></body>
+</html>
